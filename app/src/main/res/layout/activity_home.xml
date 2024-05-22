@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A3640"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".home">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="14dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_weight="1" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:backgroundTint="#A6FFFFFF"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+
+        android:textColor="#FFFFFF" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="146dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:backgroundTint="#084259"
+            android:text="Ativos"
+            app:cornerRadius="8dp"
+            app:icon="@mipmap/ic_launcher_foreground" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:backgroundTint="#084259"
+            android:text="Calendário"
+            app:cornerRadius="8dp"
+            app:icon="@mipmap/calendary_foreground" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:backgroundTint="#084259"
+            android:text="Comunidade"
+            app:cornerRadius="8dp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="139dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:backgroundTint="#084259"
+            android:text="Conceitos"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_weight="1"
+        android:background="#4D000000"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:icon="@android:drawable/ic_dialog_info" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            app:icon="@android:drawable/ic_dialog_info" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textAllCaps="true"
+            app:icon="@android:drawable/ic_dialog_info" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
