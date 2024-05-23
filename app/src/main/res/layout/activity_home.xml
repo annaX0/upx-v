@@ -7,162 +7,106 @@
     android:layout_height="match_parent"
     android:background="#0A3640"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="20dp"
     tools:context=".home">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/text_active"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView"
-        android:textColor="#FFFFFF"
-        android:textSize="14dp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="12dp"
-        android:layout_weight="1" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_weight="1"
-        android:background="@color/white"
-        android:backgroundTint="#A6FFFFFF"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-
+        android:text="Pesquisar por ativos"
         android:textColor="#FFFFFF" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="24dp"
-        android:layout_weight="1" />
+        android:layout_height="15dp" />
+
+    <EditText
+        android:id="@+id/inputSearch"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#A6FFFFFF"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Pesquisar"
+        android:textColor="#455A64"
+        android:textSize="16sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="32dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="146dp"
+            android:id="@+id/btn_ativos"
+            android:layout_width="200dp"
             android:layout_height="143dp"
             android:layout_weight="1"
+            android:background="@drawable/shadow_background"
             android:backgroundTint="#084259"
-            android:text="Ativos"
-            app:cornerRadius="8dp"
-            app:icon="@mipmap/ic_launcher_foreground" />
+            android:text="Ativos salvos"
+            app:cornerRadius="16dp" />
 
         <Space
-            android:layout_width="20dp"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:id="@+id/btn_calendario"
+            android:layout_width="200dp"
             android:layout_height="143dp"
             android:layout_weight="1"
+            android:background="@drawable/shadow_background"
             android:backgroundTint="#084259"
+            android:gravity="center"
             android:text="Calendário"
-            app:cornerRadius="8dp"
-            app:icon="@mipmap/calendary_foreground" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="143dp"
-            android:layout_weight="1"
-            android:backgroundTint="#084259"
-            android:text="Comunidade"
-            app:cornerRadius="8dp" />
-
-        <Space
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="139dp"
-            android:layout_height="143dp"
-            android:layout_weight="1"
-            android:backgroundTint="#084259"
-            android:text="Conceitos"
-            app:cornerRadius="8dp" />
+            android:textSize="16sp"
+            app:cornerRadius="16dp" />
     </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="169dp"
-        android:layout_weight="1" />
+        android:layout_height="12dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:layout_weight="1"
-        android:background="#4D000000"
-        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/btn_comunidade"
+            android:layout_width="200dp"
+            android:layout_height="143dp"
+            android:layout_weight="1"
+            android:backgroundTint="#084259"
+
+            android:background="@drawable/shadow_background"
+            android:text="Comunidade"
+            app:cornerRadius="16dp" />
+
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/button9"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:id="@+id/btn_conceitos"
+            android:layout_width="200dp"
+            android:layout_height="143dp"
             android:layout_weight="1"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            app:icon="@android:drawable/ic_dialog_info" />
+            android:backgroundTint="#084259"
+            android:background="@drawable/shadow_background"
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            app:icon="@android:drawable/ic_dialog_info" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_weight="1"
-            android:textAlignment="textEnd"
-            android:textAllCaps="true"
-            app:icon="@android:drawable/ic_dialog_info" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
+            android:text="Conceitos"
+            app:cornerRadius="16dp" />
     </LinearLayout>
-
 </LinearLayout>

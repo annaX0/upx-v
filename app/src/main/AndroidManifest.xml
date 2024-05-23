@@ -13,6 +13,10 @@
         android:theme="@style/Theme.Upx_contabil"
         tools:targetApi="31">
         <activity
+            android:name=".ativos"
+            android:exported="false"
+            android:theme="@style/Theme.Upx_contabil" />
+        <activity
             android:name=".home"
             android:exported="false"
             android:theme="@style/Theme.Upx_contabil" />

@@ -1,0 +1,12 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra -->
+    <item android:drawable="@drawable/shadow"> <!-- Definir sombra como um drawable -->
+    </item>
+    <!-- Botão -->
+    <item android:top="0dp" android:bottom="2dp" android:left="0dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <solid android:color="#084259" /> <!-- Cor do botão -->
+        </shape>
+    </item>
+</layer-list>
