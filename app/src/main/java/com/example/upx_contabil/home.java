@@ -24,14 +24,43 @@ public class home extends AppCompatActivity {
             return insets;
         });
 
-        Button button = findViewById(R.id.btn_ativos);
+        Button clickaAivos = findViewById(R.id.btn_ativos);
+        Button clickCalendario = findViewById(R.id.btn_calendario);
+        Button clickComunidade = findViewById(R.id.btn_comunidade);
+        Button clickConceitos = findViewById(R.id.btn_conceitos);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        clickaAivos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(home.this, ativos.class);
                 startActivity(intent);
             }
         });
+
+        clickCalendario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home.this, expandAtivos.class);
+                startActivity(intent);
+            }
+
+        });
+
+        clickConceitos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home.this, conceitos.class);
+                startActivity(intent);
+            }
+        });
+
+        clickComunidade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home.this, comunidade.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

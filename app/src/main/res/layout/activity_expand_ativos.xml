@@ -8,7 +8,9 @@
     android:background="#0A3640"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".ativos">
+    tools:context=".expandAtivos"
+
+    >
 
     <TextView
         android:id="@+id/text_active_ativos"
@@ -22,74 +24,42 @@
         android:id="@+id/inputSearchAtivos"
         android:layout_width="match_parent"
         android:layout_height="32dp"
+        android:layout_weight="1"
         android:background="#A6FFFFFF"
         android:ems="10"
         android:inputType="text"
         android:text="Pesquisar"
         android:textColor="#455A64"
-        android:textSize="16sp"
-        />
+        android:textSize="16sp" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
-    <LinearLayout
+    <CalendarView
+        android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
+        android:background="@drawable/shadow_background"
+        android:dateTextAppearance="@style/CalendarDateText"
+        android:layerType="none"
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:text="Cotação"
-            android:background="@drawable/shadow_background"
+        />
 
-            app:cornerRadius="12dp" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:text="P/VP"
-            android:background="@drawable/shadow_background"
-
-            app:cornerRadius="12dp" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:background="@drawable/shadow_background"
-
-            android:text="DY"
-            app:cornerRadius="12dp" />
-    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_weight="1" />
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:stretchColumns="1"
+        android:layout_weight="1"
         android:background="@drawable/shadow_background"
+        android:padding="16dp"
 
-        >
+        android:stretchColumns="1">
 
         <!-- Primeira Linha (Cabeçalho) -->
         <TableRow>
@@ -117,14 +87,15 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="P/VP"
-                android:textStyle="bold"
                 android:textColor="#FFF"
+                android:textStyle="bold"
 
                 />
         </TableRow>
 
         <!-- Segunda Linha (Dados) -->
         <TableRow>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -148,41 +119,8 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="1,6"
-                android:textColor="#FFF"
-                />
+                android:textColor="#FFF" />
         </TableRow>
 
     </TableLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <!-- Adicione o CalendarView -->
-
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/shadow_background"
-            android:dateTextAppearance="@style/CalendarDateText"
-            android:layerType="none"
-
-            />
-
-        <!-- Adicione o botão -->
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/expandButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-41dp"
-        android:text="ir" />
 </LinearLayout>

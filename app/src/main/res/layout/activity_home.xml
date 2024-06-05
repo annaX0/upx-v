@@ -11,7 +11,7 @@
     tools:context=".home">
 
     <TextView
-        android:id="@+id/text_active"
+        android:id="@+id/text_active_ativos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pesquisar por ativos"
@@ -22,7 +22,7 @@
         android:layout_height="15dp" />
 
     <EditText
-        android:id="@+id/inputSearch"
+        android:id="@+id/inputSearchAtivos"
         android:layout_width="match_parent"
         android:layout_height="32dp"
         android:background="#A6FFFFFF"
@@ -30,7 +30,9 @@
         android:inputType="text"
         android:text="Pesquisar"
         android:textColor="#455A64"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+
+        />
 
     <Space
         android:layout_width="match_parent"
