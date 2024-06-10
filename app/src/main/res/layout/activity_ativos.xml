@@ -42,52 +42,7 @@
         android:layout_weight="1"
         android:text="btnSearch" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:text="Cotação"
-            android:background="@drawable/shadow_background"
-
-            app:cornerRadius="12dp" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:text="P/VP"
-            android:background="@drawable/shadow_background"
-
-            app:cornerRadius="12dp" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="64dp"
-            android:layout_weight="1"
-            android:background="@drawable/shadow_background"
-
-            android:text="DY"
-            app:cornerRadius="12dp" />
-    </LinearLayout>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -98,7 +53,6 @@
 
         >
 
-        <!-- Primeira Linha (Cabeçalho) -->
         <TableRow>
 
             <TextView
@@ -113,9 +67,9 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="PR"
+                android:text="P/VP"
                 android:textColor="#FFF"
                 android:textStyle="bold" />
 
@@ -132,31 +86,32 @@
 
         <!-- Segunda Linha (Dados) -->
         <TableRow>
+
             <TextView
+                android:id="@+id/text_per_ratio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="8,86"
-                android:textColor="#FFF"
+                android:text="-"
 
-                />
+                android:textColor="#FFF" />
 
             <TextView
+                android:id="@+id/text_pvp"
                 android:layout_width="225dp"
                 android:layout_height="match_parent"
                 android:padding="8dp"
-                android:text="8,86"
-                android:textColor="#FFF"
+                android:text="-"
 
-                />
+                android:textColor="#FFF" />
 
             <TextView
+                android:id="@+id/text_dividend_yield"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="1,6"
-                android:textColor="#FFF"
-                />
+                android:text="-"
+                android:textColor="#FFF" />
         </TableRow>
 
     </TableLayout>
