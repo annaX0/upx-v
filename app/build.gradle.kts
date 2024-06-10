@@ -55,4 +55,6 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
     implementation ("org.apache.httpcomponents:httpclient:4.5.13")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
 }

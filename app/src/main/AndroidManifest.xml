@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Upx_contabil"
         tools:targetApi="31">
         <activity
+            android:name=".result"
+            android:exported="false" />
+        <activity
             android:name=".conceitos"
             android:exported="false" />
         <activity

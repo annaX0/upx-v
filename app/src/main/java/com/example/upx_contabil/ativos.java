@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ativos extends AppCompatActivity {
 
@@ -24,6 +27,9 @@ public class ativos extends AppCompatActivity {
             return insets;
         });
         Button button = findViewById(R.id.expandButton);
+        Button search = findViewById(R.id.btnSearch);
+
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,5 +38,14 @@ public class ativos extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ativos.this, result.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
