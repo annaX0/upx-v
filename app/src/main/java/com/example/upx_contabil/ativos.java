@@ -42,7 +42,7 @@ public class ativos extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ativos.this, result.class);
+                Intent intent = new Intent(ativos.this, resultSearch.class);
                 startActivity(intent);
             }
         });
