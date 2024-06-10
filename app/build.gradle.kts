@@ -30,6 +30,15 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    packagingOptions{
+        exclude ("META-INF/DEPENDENCIES")
+        exclude ("META-INF/LICENSE")
+        exclude ("META-INF/LICENSE.txt")
+        exclude ("META-INF/license.txt")
+        exclude ("META-INF/NOTICE")
+        exclude ("META-INF/NOTICE.txt")
+        exclude ("META-INF/notice.txt")
+    }
 }
 
 dependencies {
@@ -43,4 +52,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
+    implementation ("org.apache.httpcomponents:httpclient:4.5.13")
 }
