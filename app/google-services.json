@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685707776281",
+    "project_id": "upx-contabil",
+    "storage_bucket": "upx-contabil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685707776281:android:ce545420b48caaba793588",
+        "android_client_info": {
+          "package_name": "com.example.upx_contabil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCadfY46XXveGOSy0U9hlKCgkQgtXx4vWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
