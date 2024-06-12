@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
+
 }
 
 android {
@@ -59,5 +60,7 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
     implementation ("org.apache.httpcomponents:httpclient:4.5.13")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.google.firebase:firebase-auth:23.0.0")
+
 
 }

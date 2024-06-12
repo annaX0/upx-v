@@ -17,7 +17,7 @@
             android:name=".resultSearch"
             android:exported="false" />
         <activity
-            android:name=".result"
+            android:name=".register"
             android:exported="false" />
         <activity
             android:name=".conceitos"
