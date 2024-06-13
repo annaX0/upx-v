@@ -16,20 +16,20 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Pesquisar por ativos"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        />
 
     <EditText
         android:id="@+id/inputSearchAtivos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
         android:background="#A6FFFFFF"
         android:ems="10"
+        android:hint="Pesquisar"
         android:inputType="text"
         android:textColor="#455A64"
-        android:textSize="16sp"
-        android:hint="Pesquisar"
         android:textColorHint="@color/white"
-        />
+        android:textSize="16sp" />
 
     <Space
         android:layout_width="match_parent"
@@ -50,6 +50,14 @@
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Ativo:"
+        android:textColor="#FFFFFF" />
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,8 +70,8 @@
         <TableRow>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="P/L"
                 android:textColor="#FFF"
@@ -72,7 +80,7 @@
                 />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="32dp"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="P/VP"
@@ -80,22 +88,45 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
+
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="P/VP"
+                android:text="DY"
                 android:textStyle="bold"
                 android:textColor="#FFF"
 
                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Data dividendo"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Data Ex"
+                android:textColor="#FFF"
+                android:textStyle="bold"
+
+                />
         </TableRow>
 
-        <!-- Segunda Linha (Dados) -->
         <TableRow>
 
             <TextView
                 android:id="@+id/text_per_ratio"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
+
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
@@ -104,8 +135,9 @@
 
             <TextView
                 android:id="@+id/text_pvp"
-                android:layout_width="225dp"
-                android:layout_height="match_parent"
+                android:layout_width="50dp"
+
+                android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
 
@@ -113,7 +145,26 @@
 
             <TextView
                 android:id="@+id/text_dividend_yield"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="-"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/text_DividendDate"
+                android:layout_width="50dp"
+
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="-"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/text_ExDividendDate"
+                android:layout_width="50dp"
+
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
@@ -131,7 +182,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Adicione o CalendarView -->
 
         <CalendarView
             android:id="@+id/calendarView"

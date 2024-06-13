@@ -91,9 +91,15 @@ public class ativos extends AppCompatActivity {
         TextView textViewPERatio = findViewById(R.id.text_per_ratio);
         TextView textViewPVP = findViewById(R.id.text_pvp);
         TextView textViewDY = findViewById(R.id.text_dividend_yield);
+        TextView textName = findViewById(R.id.txtName);
+        TextView textDividendDate = findViewById(R.id.text_DividendDate);
+        TextView textEx = findViewById(R.id.text_ExDividendDate);
 
         textViewPERatio.setText(data.getPERatio());
         textViewPVP.setText(data.getPriceToBookRatio());
         textViewDY.setText(data.getDividendYield());
+        textName.setText(data.getName());
+        textDividendDate.setText(data.getDividendDate());
+        textEx.setText(data.getExDividendDate());
     }
 }

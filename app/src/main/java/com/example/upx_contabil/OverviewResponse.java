@@ -4,14 +4,50 @@ public class OverviewResponse {
     private String PERatio;
     private String PriceToBookRatio;
     private String DividendYield;
-    // Adicione outros campos conforme necessário
 
-    // Construtor (se necessário)
-    public OverviewResponse() {
-        // Inicialização de campos, se necessário
+    public String getDividendDate() {
+        return DividendDate;
     }
 
-    // Getters e Setters
+    public OverviewResponse(String dividendDate, String exDividendDate) {
+        DividendDate = dividendDate;
+        ExDividendDate = exDividendDate;
+    }
+
+    public void setDividendDate(String dividendDate) {
+        DividendDate = dividendDate;
+    }
+
+    public String getExDividendDate() {
+        return ExDividendDate;
+    }
+
+    public void setExDividendDate(String exDividendDate) {
+        ExDividendDate = exDividendDate;
+    }
+
+    private String DividendDate;
+    private String ExDividendDate;
+
+
+
+    private String Name;
+
+    public OverviewResponse(String name) {
+        Name = name;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public OverviewResponse() {
+    }
+
     public String getPERatio() {
         return PERatio;
     }
@@ -36,15 +72,15 @@ public class OverviewResponse {
         this.DividendYield = DividendYield;
     }
 
-    // Adicione outros getters e setters conforme necessário
-
     @Override
     public String toString() {
         return "OverviewResponse{" +
                 "PERatio='" + PERatio + '\'' +
                 ", PriceToBookRatio='" + PriceToBookRatio + '\'' +
                 ", DividendYield='" + DividendYield + '\'' +
-                // Adicione outros campos aqui
+                ", Symbol='" + Name + '\'' +
+                ", DividendDate='" + DividendDate + '\'' +
+                ", ExDividendDate='" + ExDividendDate + '\'' +
                 '}';
     }
 }
