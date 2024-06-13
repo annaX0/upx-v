@@ -57,7 +57,7 @@ public class ativos extends AppCompatActivity {
 
     private void fetchStockData(String symbol) {
         AlphaVantageAPI api = ApiClient.getClient().create(AlphaVantageAPI.class);
-        String apiKey = "demo"; // Atualize aqui com sua API key
+        String apiKey = "7XD6KQZLOSTHRF5W";
         Call<OverviewResponse> call = api.getOverview("OVERVIEW", symbol, apiKey);
 
         call.enqueue(new Callback<OverviewResponse>() {

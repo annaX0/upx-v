@@ -34,10 +34,6 @@
         android:layout_height="240dp"
         app:srcCompat="@mipmap/bookmarks_foreground" />
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="50dp" />
-
     <TextView
         android:id="@+id/login_title"
         android:layout_width="match_parent"
@@ -63,9 +59,8 @@
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
         android:paddingLeft="10dp"
-        android:hint="Digite seu e-mail"
+        android:hint="Digite sua senha"
         android:textColorHint="@color/white"
-
         />
 
     <Space
@@ -79,7 +74,7 @@
         android:background="@color/white"
         android:backgroundTint="#B3212121"
         android:ems="10"
-        android:inputType="numberPassword"
+        android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:hint="Digite sua senha"
         android:textColorHint="@color/white"
@@ -106,7 +101,7 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
         android:layout_weight="1"
         android:backgroundTint="#04BF9D"
         android:text="Entrar"

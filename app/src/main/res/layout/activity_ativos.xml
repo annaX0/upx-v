@@ -20,14 +20,15 @@
 
     <EditText
         android:id="@+id/inputSearchAtivos"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="#A6FFFFFF"
         android:ems="10"
         android:inputType="text"
-        android:text="Pesquisar"
         android:textColor="#455A64"
         android:textSize="16sp"
+        android:hint="Pesquisar"
+        android:textColorHint="@color/white"
         />
 
     <Space
@@ -38,11 +39,16 @@
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="26dp"
         android:layout_weight="1"
-        android:text="btnSearch" />
+
+        android:text="Busar" />
 
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -141,10 +147,4 @@
         <!-- Adicione o botão -->
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/expandButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-41dp"
-        android:text="ir" />
 </LinearLayout>
