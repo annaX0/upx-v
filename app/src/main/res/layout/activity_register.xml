@@ -26,9 +26,16 @@
         android:layout_width="match_parent"
         android:layout_height="80dp" />
 
-    <Space
+    <TextView
+        android:id="@+id/txtRegister"
+        android:text="Registar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32dp"
         android:layout_width="match_parent"
-        android:layout_height="50dp" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        />
 
     <TextView
         android:id="@+id/login_title"
@@ -52,8 +59,10 @@
         android:backgroundTint="#B3212121"
         android:ems="10"
         android:inputType="text"
-        android:textColor="#FFFFFF"
-
+        android:textColor="@color/white"
+        android:hint="Digite seu nome"
+        android:textColorHint="@color/white"
+        android:paddingLeft="10dp"
         tools:ignore="LabelFor" />
 
     <Space
@@ -67,6 +76,12 @@
         android:autofillHints="emailAddress"
         android:background="@color/white"
         android:backgroundTint="#B3212121"
+        android:textColor="@color/white"
+        android:hint="Digite seu e-mail"
+        android:paddingLeft="10dp"
+
+        android:textColorHint="@color/white"
+
         android:ems="10"
         android:inputType="textEmailAddress" />
 
@@ -81,6 +96,11 @@
         android:autofillHints="password"
         android:background="@color/white"
         android:backgroundTint="#B3212121"
+        android:textColor="@color/white"
+        android:hint="Digite sua senha"
+        android:paddingLeft="10dp"
+
+        android:textColorHint="@color/white"
         android:ems="10"
 
         android:inputType="textPassword"
@@ -88,21 +108,23 @@
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="224dp" />
+        android:layout_height="204dp" />
 
     <Button
         android:id="@+id/btn_register"
         android:layout_width="357dp"
-        android:layout_height="match_parent"
+        android:layout_height="52dp"
         android:layout_weight="1"
         android:backgroundTint="#04BF9D"
         android:text="@string/registrar"
-        app:cornerRadius="8dp" />
+        app:cornerRadius="8dp"
+        />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="357dp"
-        android:layout_height="wrap_content"
+        android:layout_height="52dp"
+
         android:text="@string/j_tenho_uma_conta"
         android:textAlignment="center"
         android:textColor="#FFFFFF"

@@ -1,5 +1,6 @@
 package com.example.upx_contabil;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
 public class register extends AppCompatActivity {
     private EditText inputName, inputEmail, inputPassword;
-    private Button btnRegister;
+    private Button btnRegister, btnLogin;
     private FirebaseAuth mAuth;
 
     @Override
@@ -29,6 +29,15 @@ public class register extends AppCompatActivity {
         inputEmail = findViewById(R.id.input_mail);
         inputPassword = findViewById(R.id.input_password);
         btnRegister = findViewById(R.id.btn_register);
+        btnLogin = findViewById(R.id.btnLogin);
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(register.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
