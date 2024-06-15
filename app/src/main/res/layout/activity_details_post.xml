@@ -26,6 +26,13 @@
         android:textSize="10sp"
         android:text="15/06/2024"
         />
+    <TextView
+        android:id="@+id/postEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#B3FFFFFF"
+        android:text="email@email.com" />
+
 
     <TextView
         android:id="@+id/postMessage"
@@ -70,7 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#009688"
-        android:text="Novo Post"
+        android:text="Comentar"
         app:cornerRadius="10dp" />
 
     <Button

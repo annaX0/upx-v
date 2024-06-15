@@ -9,9 +9,6 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,7 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class comunidade extends AppCompatActivity {
 
@@ -39,13 +35,21 @@ public class comunidade extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_comunidade);
 
-
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-
         postagemList = new ArrayList<>();
-        postAdapter = new PostAdapter(postagemList);
+        postAdapter = new PostAdapter(postagemList, new PostAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Postagem postagem) {
+                Intent intent = new Intent(comunidade.this, detailsPost.class);
+                intent.putExtra("postName", postagem.getNome());
+                intent.putExtra("postDate", postagem.getData());
+                intent.putExtra("postMessage", postagem.getMensagem());
+                intent.putExtra("postEmail", postagem.getEmail());
+                startActivity(intent);
+            }
+        });
         recyclerView.setAdapter(postAdapter);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("postagens");
@@ -67,7 +71,6 @@ public class comunidade extends AppCompatActivity {
             }
         });
 
-
         Button btnBack = findViewById(R.id.btn_back);
         Button btnNewPost = findViewById(R.id.btn_newPost);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +88,5 @@ public class comunidade extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }
