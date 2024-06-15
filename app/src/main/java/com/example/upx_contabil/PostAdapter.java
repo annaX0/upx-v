@@ -31,6 +31,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         Postagem postagem = postagemList.get(position);
         holder.postName.setText(postagem.nome);
         holder.postMessage.setText(postagem.mensagem);
+        holder.postDate.setText(postagem.data);
     }
 
     @Override
@@ -39,13 +40,15 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
     }
 
     public static class PostViewHolder extends RecyclerView.ViewHolder {
-        public TextView postName;
-        public TextView postMessage;
+        public TextView postName, postMessage, postDate;
+
+
 
         public PostViewHolder(View itemView) {
             super(itemView);
             postName = itemView.findViewById(R.id.postName);
             postMessage = itemView.findViewById(R.id.postMessage);
+            postDate = itemView.findViewById(R.id.postDate);
         }
     }
 }

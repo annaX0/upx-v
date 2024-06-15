@@ -21,7 +21,6 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="358dp"
-
         android:layout_height="wrap_content"
         android:text="Criar nova postagem"
         android:textColor="#FFFFFF" />
@@ -38,7 +37,7 @@
         android:backgroundTint="#B3212121"
         android:ems="10"
         android:hint="Nome da postagem"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:textColor="#FFFFFF"
         android:textColorHint="@color/white" />
@@ -55,7 +54,7 @@
         android:backgroundTint="#B3212121"
         android:ems="10"
         android:hint="Texto da postagem"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:textColor="#FFFFFF"
         android:textColorHint="@color/white" />
@@ -70,9 +69,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#009688"
         android:text="Cadastrar"
-        app:cornerRadius="10dp"
-
-        />
+        app:cornerRadius="10dp" />
 
     <Button
         android:id="@+id/btn_back"
@@ -85,8 +82,5 @@
         android:paddingRight="0dp"
         android:paddingBottom="0dp"
         android:text="Voltar"
-        app:cornerRadius="10dp"
-
-        />
-
+        app:cornerRadius="10dp" />
 </LinearLayout>

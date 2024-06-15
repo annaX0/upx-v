@@ -7,25 +7,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 public class newPost extends AppCompatActivity {
     private EditText inputName, inputMsg;
     private Button btnCadastrar, btnBack;
 
-
     private DatabaseReference databaseReference;
-
+    private FirebaseAuth mAuth;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +33,8 @@ public class newPost extends AppCompatActivity {
         btnBack = findViewById(R.id.btn_back);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("postagens");
-
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,18 +43,20 @@ public class newPost extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-       btnCadastrar.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-                   cadastrarPostagem();
-               }
 
-       });
-
+        btnCadastrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cadastrarPostagem();
+            }
+        });
     }
+
     private void cadastrarPostagem() {
         String nome = inputName.getText().toString().trim();
         String mensagem = inputMsg.getText().toString().trim();
+        String email = currentUser != null ? currentUser.getEmail() : "Email não disponível";
+        String data = Postagem.getCurrentDate();
 
         if (nome.isEmpty()) {
             inputName.setError("Nome é obrigatório");
@@ -73,7 +71,7 @@ public class newPost extends AppCompatActivity {
         }
 
         String postId = databaseReference.push().getKey();
-        Postagem postagem = new Postagem(postId, nome, mensagem);
+        Postagem postagem = new Postagem(postId, nome, mensagem, data, email);
 
         if (postId != null) {
             databaseReference.child(postId).setValue(postagem)
@@ -84,21 +82,6 @@ public class newPost extends AppCompatActivity {
                             Toast.makeText(newPost.this, "Falha ao cadastrar postagem.", Toast.LENGTH_SHORT).show();
                         }
                     });
-        }
-    }
-
-    public static class Postagem {
-        public String id;
-        public String nome;
-        public String mensagem;
-
-        public Postagem() {
-        }
-
-        public Postagem(String id, String nome, String mensagem) {
-            this.id = id;
-            this.nome = nome;
-            this.mensagem = mensagem;
         }
     }
 }

@@ -9,8 +9,19 @@
         android:id="@+id/postName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="#FFFFFF" />
+        android:fontFamily="@font/lato_bold"
+        android:textColor="#FFFFFF"
+
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/postDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#C8C8C8"
+        android:textSize="10sp"
+
+        />
 
     <TextView
         android:id="@+id/postMessage"
