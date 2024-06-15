@@ -1,5 +1,6 @@
 package com.example.upx_contabil;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log; // Adicionado import do Log
 import android.text.Editable;
@@ -15,10 +16,16 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.widget.CalendarView;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class ativos extends AppCompatActivity {
 
-    private EditText inputSearchAtivos;  // EditText para entrada do símbolo
-    private String currentSymbol = "IBM"; // Valor inicial do símbolo
+    private EditText inputSearchAtivos;
+    private String currentSymbol = "IBM";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,22 +35,18 @@ public class ativos extends AppCompatActivity {
         inputSearchAtivos = findViewById(R.id.inputSearchAtivos);
         Button search = findViewById(R.id.btnSearch);
 
-        // Adiciona um TextWatcher para capturar mudanças no EditText
         inputSearchAtivos.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
-                // Não necessário para esta funcionalidade
             }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                // Atualiza o símbolo ao digitar
-                currentSymbol = charSequence.toString().toUpperCase(); // Converte para maiúsculas
+                currentSymbol = charSequence.toString().toUpperCase();
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
-                // Não necessário para esta funcionalidade
             }
         });
 
@@ -94,12 +97,51 @@ public class ativos extends AppCompatActivity {
         TextView textName = findViewById(R.id.txtName);
         TextView textDividendDate = findViewById(R.id.text_DividendDate);
         TextView textEx = findViewById(R.id.text_ExDividendDate);
+        CalendarView calendarView = findViewById(R.id.calendarView);
+
+        Button btnBack = findViewById(R.id.btn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ativos.this, home.class);
+                startActivity(intent);
+            }
+        });
+
+
+        String date1 = data.getDividendDate();
+        String date2 = data.getExDividendDate();
+
+        markDateOnCalendar(calendarView, date1);
+        markDateOnCalendar(calendarView, date2);
+
+        double dividendYield = Double.parseDouble(data.getDividendYield());
+
 
         textViewPERatio.setText(data.getPERatio());
         textViewPVP.setText(data.getPriceToBookRatio());
-        textViewDY.setText(data.getDividendYield());
+
+        textViewDY.setText(String.format(Locale.US, "%.2f", dividendYield));
+
+
+
         textName.setText(data.getName());
         textDividendDate.setText(data.getDividendDate());
         textEx.setText(data.getExDividendDate());
+
+
+    }
+
+    private void markDateOnCalendar(CalendarView calendarView, String dateString) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        try {
+            Date date = sdf.parse(dateString);
+            if (date != null) {
+                long dateInMillis = date.getTime();
+                calendarView.setDate(dateInMillis, false, true);
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -61,8 +61,8 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:stretchColumns="1"
+        android:padding="10dp"
+        android:stretchColumns="4"
         android:background="@drawable/shadow_background"
 
         >
@@ -70,7 +70,7 @@
         <TableRow>
 
             <TextView
-                android:layout_width="50dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="P/L"
@@ -80,19 +80,20 @@
                 />
 
             <TextView
-                android:layout_width="32dp"
+                android:text="P/VP"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="P/VP"
+                android:textStyle="bold"
                 android:textColor="#FFF"
-                android:textStyle="bold" />
+                />
 
             <TextView
-                android:layout_width="50dp"
+                android:text="DY"
 
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="DY"
                 android:textStyle="bold"
                 android:textColor="#FFF"
 
@@ -100,10 +101,9 @@
 
             <TextView
                 android:layout_width="wrap_content"
-
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="Data dividendo"
+                android:text="Dt dividendo"
                 android:textColor="#FFF"
                 android:textStyle="bold"
 
@@ -125,28 +125,27 @@
 
             <TextView
                 android:id="@+id/text_per_ratio"
-                android:layout_width="50dp"
-
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
+                android:textColor="#FFF"
 
-                android:textColor="#FFF" />
+                />
 
             <TextView
                 android:id="@+id/text_pvp"
-                android:layout_width="50dp"
-
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
+                android:textColor="#FFF"
 
-                android:textColor="#FFF" />
+                />
 
             <TextView
                 android:id="@+id/text_dividend_yield"
-                android:layout_width="50dp"
-
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
@@ -154,17 +153,16 @@
 
             <TextView
                 android:id="@+id/text_DividendDate"
-                android:layout_width="50dp"
-
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
-                android:textColor="#FFF" />
+                android:textColor="#FFF"
+                />
 
             <TextView
                 android:id="@+id/text_ExDividendDate"
-                android:layout_width="50dp"
-
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:text="-"
@@ -193,8 +191,20 @@
             android:layerType="none"
 
             />
-
-        <!-- Adicione o botão -->
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="51dp"
+        android:layout_height="13dp"
+        android:layout_weight="1"
+        android:paddingLeft="0dp"
+
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Voltar"
+        app:cornerRadius="10dp" />
 
 </LinearLayout>

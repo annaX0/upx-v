@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        // Login bem-sucedido, redirecionar para a tela principal
                         FirebaseUser user = mAuth.getCurrentUser();
                         Log.d(TAG, "signInWithEmail:success");
                         Toast.makeText(MainActivity.this, "Autenticação bem-sucedida.", Toast.LENGTH_SHORT).show();
@@ -67,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
-                        // Se o login falhar, exibir uma mensagem ao usuário
                         Log.w(TAG, "signInWithEmail:failure", task.getException());
                         Toast.makeText(MainActivity.this, "Autenticação falhou: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }

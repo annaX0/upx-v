@@ -9,7 +9,7 @@
     android:background="#0A3640"
     android:backgroundTint="#0A3640"
     android:baselineAligned="false"
-    android:gravity="center|fill_vertical"
+    android:gravity="fill_vertical"
     android:layoutDirection="inherit"
     android:layoutMode="clipBounds"
     android:orientation="vertical"
@@ -83,9 +83,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="#FFFFFF"
+                android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView"
 
-                android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView" />
+                android:textColor="#FFFFFF" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,5 +117,24 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="378dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:text="Voltar"
+        app:cornerRadius="10dp"
+        />
 
 </LinearLayout>
