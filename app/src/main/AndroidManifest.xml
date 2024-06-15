@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Upx_contabil"
         tools:targetApi="31">
         <activity
+            android:name=".detailsPost"
+            android:exported="false" />
+        <activity
             android:name=".newPost"
             android:exported="false" />
         <activity

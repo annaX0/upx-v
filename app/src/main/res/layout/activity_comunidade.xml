@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="20dp"
     android:background="#0A3640"
-    tools:context=".ComunidadeActivity">
+    tools:context=".comunidade">
 
     <TextView
         android:id="@+id/text_active_ativos"
