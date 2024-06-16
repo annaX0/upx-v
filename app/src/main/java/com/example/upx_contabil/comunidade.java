@@ -47,6 +47,7 @@ public class comunidade extends AppCompatActivity {
                 intent.putExtra("postDate", postagem.getData());
                 intent.putExtra("postMessage", postagem.getMensagem());
                 intent.putExtra("postEmail", postagem.getEmail());
+                intent.putExtra("postId", postagem.getId());
                 startActivity(intent);
             }
         });

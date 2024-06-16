@@ -58,6 +58,7 @@ public class newPost extends AppCompatActivity {
         String email = currentUser != null ? currentUser.getEmail() : "Email não disponível";
         String data = Postagem.getCurrentDate();
 
+
         if (nome.isEmpty()) {
             inputName.setError("Nome é obrigatório");
             inputName.requestFocus();
