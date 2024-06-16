@@ -39,7 +39,6 @@ public class detailsPost extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_post);
 
-        // Inicialização dos componentes
         postName = findViewById(R.id.postName);
         postDate = findViewById(R.id.postDate);
         postMessage = findViewById(R.id.postMessage);
@@ -53,36 +52,29 @@ public class detailsPost extends AppCompatActivity {
         commentsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         commentsRecyclerView.setAdapter(commentsAdapter);
 
-        // Recebe os dados do post
         String nome = getIntent().getStringExtra("postName");
         String data = getIntent().getStringExtra("postDate");
         String mensagem = getIntent().getStringExtra("postMessage");
         String email = getIntent().getStringExtra("postEmail");
         postId = getIntent().getStringExtra("postId");
 
-        // Verifica se o postId é nulo
         if (postId == null) {
             Toast.makeText(this, "Post ID não fornecido.", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
 
-        // Atualiza os TextViews com os dados do post
         postName.setText(nome);
         postDate.setText(data);
         postMessage.setText(mensagem);
         postEmail.setText(email);
 
-        // Configura a referência do banco de dados
         commentsReference = FirebaseDatabase.getInstance().getReference("postagens").child(postId).child("comments");
 
-        // Carrega os comentários existentes
         loadComments();
 
-        // Configura o listener do botão para enviar comentários
         btnSubmitComment.setOnClickListener(v -> submitComment());
 
-        // Configura o botão de voltar
         Button btnBack = findViewById(R.id.btn_back);
         btnBack.setOnClickListener(v -> finish());
     }

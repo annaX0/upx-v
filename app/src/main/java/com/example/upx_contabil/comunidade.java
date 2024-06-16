@@ -2,8 +2,11 @@ package com.example.upx_contabil;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -22,12 +25,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class comunidade extends AppCompatActivity {
-
     private RecyclerView recyclerView;
     private PostAdapter postAdapter;
     private List<Postagem> postagemList;
-
+    private List<Postagem> filteredList;
     private DatabaseReference databaseReference;
+    private EditText inputSearchAtivos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +42,8 @@ public class comunidade extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         postagemList = new ArrayList<>();
-        postAdapter = new PostAdapter(postagemList, new PostAdapter.OnItemClickListener() {
+        filteredList = new ArrayList<>();
+        postAdapter = new PostAdapter(filteredList, new PostAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(Postagem postagem) {
                 Intent intent = new Intent(comunidade.this, detailsPost.class);
@@ -55,6 +59,24 @@ public class comunidade extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("postagens");
 
+        inputSearchAtivos = findViewById(R.id.inputSearchAtivos);
+       inputSearchAtivos.addTextChangedListener(new TextWatcher() {
+           @Override
+           public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+           }
+
+           @Override
+           public void onTextChanged(CharSequence s, int start, int before, int count) {
+               filterPosts(s.toString());
+           }
+
+           @Override
+           public void afterTextChanged(Editable s) {
+
+           }
+       });
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -63,6 +85,8 @@ public class comunidade extends AppCompatActivity {
                     Postagem postagem = postSnapshot.getValue(Postagem.class);
                     postagemList.add(postagem);
                 }
+                filteredList.clear();
+                filteredList.addAll(postagemList);
                 postAdapter.notifyDataSetChanged();
             }
 
@@ -90,4 +114,19 @@ public class comunidade extends AppCompatActivity {
             }
         });
     }
+
+    private void filterPosts(String query) {
+        filteredList.clear();
+        if (query.isEmpty()) {
+            filteredList.addAll(postagemList);
+        } else {
+            for (Postagem postagem : postagemList) {
+                if (postagem.getNome().toLowerCase().contains(query.toLowerCase())) {
+                    filteredList.add(postagem);
+                }
+            }
+        }
+        postAdapter.notifyDataSetChanged();
+    }
+
 }
