@@ -10,46 +10,18 @@
     android:padding="20dp"
     tools:context=".home">
 
-    <TextView
-        android:id="@+id/text_active_ativos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pesquisar por ativos"
-        android:textColor="#FFFFFF" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="15dp" />
-
-    <EditText
-        android:id="@+id/inputSearchAtivos"
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:background="#A6FFFFFF"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Pesquisar"
-        android:textColor="#455A64"
-        android:textSize="16sp"
-
-        />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="32dp" />
-
     <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_ativos"
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="143dp"
             android:layout_weight="1"
             android:background="@drawable/shadow_background"
@@ -62,17 +34,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <Button
-            android:id="@+id/btn_calendario"
-            android:layout_width="200dp"
-            android:layout_height="143dp"
-            android:layout_weight="1"
-            android:background="@drawable/shadow_background"
-            android:backgroundTint="#084259"
-            android:gravity="center"
-            android:text="Calendário"
-            android:textSize="16sp"
-            app:cornerRadius="16dp" />
     </LinearLayout>
 
     <Space

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,87 +17,91 @@
     android:visibility="visible"
     tools:context=".conceitos">
 
-    <TextView
-        android:id="@+id/text_active_ativos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Pesquisar por ativos"
-        android:textColor="#FFFFFF" />
-
     <EditText
-        android:id="@+id/inputSearchAtivos"
+        android:id="@+id/inputSearchConceitos"
+        android:hint="Pesquisar"
+
         android:layout_width="match_parent"
         android:layout_height="32dp"
-        android:layout_weight="1"
         android:background="#A6FFFFFF"
         android:ems="10"
         android:inputType="text"
-        android:text="Pesquisar"
         android:textColor="#455A64"
-        android:textSize="16sp" />
+        android:textSize="16sp"
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Conceitos"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="321dp"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
+            <Space
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:text="Data Ex"
-                android:textAlignment="textStart"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:layout_height="20dp" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView"
-
-                android:textColor="#FFFFFF" />
-
-            <LinearLayout
+            <EditText
+                android:id="@+id/editTextNome"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="32dp"
+                android:background="#A6FFFFFF"
+                android:ems="10"
+                android:hint="Nome do Conceito"
+                android:inputType="text"
+                android:textColor="#455A64"
+                android:textSize="16sp" />
 
-                <Button
-                    android:id="@+id/button7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Button" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
 
-            </LinearLayout>
+            <EditText
+                android:id="@+id/editTextTexto"
+
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="#A6FFFFFF"
+                android:ems="10"
+                android:hint="Texto do Conceito"
+                android:inputType="text"
+                android:textColor="#455A64"
+                android:textSize="16sp"
+
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
 
         </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/conceitosContainer"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:overScrollMode="always">
+
     </LinearLayout>
+
+
+    <Button
+        android:id="@+id/newConceito"
+        android:text="Adicionar novo"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_weight="1"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:backgroundTint="#009688"
+        app:cornerRadius="10dp"
+        />
 
     <Button
         android:id="@+id/btn_back"

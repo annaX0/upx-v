@@ -25,7 +25,6 @@ public class home extends AppCompatActivity {
         });
 
         Button clickaAivos = findViewById(R.id.btn_ativos);
-        Button clickCalendario = findViewById(R.id.btn_calendario);
         Button clickComunidade = findViewById(R.id.btn_comunidade);
         Button clickConceitos = findViewById(R.id.btn_conceitos);
 
@@ -37,14 +36,7 @@ public class home extends AppCompatActivity {
             }
         });
 
-        clickCalendario.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home.this, expandAtivos.class);
-                startActivity(intent);
-            }
 
-        });
 
         clickConceitos.setOnClickListener(new View.OnClickListener() {
             @Override
